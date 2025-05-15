@@ -50,6 +50,10 @@ header {
         color: var(--darker-green);
         font-size: 18px;
       }
+      &:focus {
+        outline: none;
+        color: white;
+      }
     }
     label {
       color: var(--darker-green);
@@ -83,7 +87,7 @@ hr {
   max-width: 1120px;
   margin: auto;
   padding: 15px;
-  section {
+  #container-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 37px;
@@ -115,5 +119,11 @@ hr {
         }
       }
     }
+  }
+  #pages {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: #007400;
   }
 }
