@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-main: "JetBrains Mono", monospace;
+
+  --w-logo: clamp(60px, 9vw, 300px);
+  --fz-title: clamp(32px, 6vw, 52px);
+  --fw-title: normal;
+  --fz-title2: clamp(32px, 5vw, 52px);
+  --fz-title3: clamp(24px, 4vw, 24px);
+  --fz-p: clamp(14px, 2vw, 18px);
+
+  --main-color: #fff;
+  --background: #000000;
+  --neon-green: #00ff00;
+  --darker-neon-green: #00cc00;
+  --darker-green: #009900;
+}
+body {
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--main-color);
+}
+header,
+footer {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+header {
+  form {
+    align-self: center;
+    border: 1px solid var(--darker-neon-green);
+    border-radius: 12px;
+    padding: 8px;
+    input {
+      padding: 5px 12px 0px;
+      background: transparent;
+      border: none;
+      &::placeholder {
+        color: var(--darker-green);
+        font-size: 18px;
+      }
+    }
+    label {
+      color: var(--darker-green);
+    }
+  }
+}
+footer {
+  p {
+    color: var(--darker-green);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    a {
+      color: var(--neon-green);
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+hr {
+  color: var(--neon-green);
+}
+#color-green {
+  color: var(--neon-green);
+}
+#operatives {
+  max-width: 1120px;
+  margin: auto;
+  padding: 15px;
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37px;
+    .card {
+      border: 1px solid var(--darker-green);
+      padding: 50px;
+      border-radius: 12px;
+      margin: 20px 0;
+      justify-self: center;
+      div:nth-child(1) {
+        justify-self: center;
+        img {
+          width: 80px;
+          border-radius: 100%;
+          border: 2px solid green;
+          padding: 5px;
+        }
+      }
+      div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        p:nth-child(2) {
+          color: var(--darker-neon-green);
+        }
+        p:nth-child(3) {
+          color: var(--darker-green);
+        }
+      }
+    }
+  }
+}
